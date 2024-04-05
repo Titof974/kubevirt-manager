@@ -12,5 +12,8 @@ export class K8sNode {
   kernel:          string = "";
   criver:          string = "";
   kubever:         string = "";
-  vmlist:    KubeVirtVM[] = [];
+  cpuUsage:        number = 0;
+  memUsage:        number = 0;
+  storageUsage:    number = 0;
+  vmlist:          KubeVirtVM[] = [];
 }

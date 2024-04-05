@@ -21,8 +21,20 @@
             <li class="nav-item">OS Image <span class="float-right badge bg-primary">{{thisNode.osimg}}</span></li>
             <li class="nav-item">Kernel <span class="float-right badge bg-primary">{{thisNode.kernel}}</span></li>
             <li class="nav-item">CRI Version <span class="float-right badge bg-primary">{{thisNode.criver}}</span></li>
-            <li class="nav-item">Kubernetes Version <span class="float-right badge bg-primary">{{thisNode.kubever}}</span></li>
+            <li class="nav-item">Kubernetes Version <span
+                class="float-right badge bg-primary">{{thisNode.kubever}}</span></li>
           </ul>
+        </div>
+        <div *ngIf="nodeExporterAvailable" class="flex-container">
+          <div>
+            <gauge [value]="thisNode.cpuUsage" [name]="'CPU'"></gauge>
+          </div>
+          <div>
+            <gauge [value]="thisNode.memUsage" [name]="'Memory'"></gauge>
+          </div>
+          <div>
+            <gauge [value]="thisNode.storageUsage" [name]="'Storage'"></gauge>
+          </div>
         </div>
       </div>
     </div>

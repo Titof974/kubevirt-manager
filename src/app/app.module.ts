@@ -21,6 +21,7 @@ import { VmpooldetailsComponent } from './components/vmpooldetails/vmpooldetails
 import { VmdetailsComponent } from './components/vmdetails/vmdetails.component';
 import { KClusterComponent } from './components/kcluster/kcluster.component';
 import { KClusterDetailsComponent } from './components/kcluster-details/kcluster-details.component';
+import { GaugechartComponent } from './components/charts/gauge.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { KClusterDetailsComponent } from './components/kcluster-details/kcluster
     VmdetailsComponent,
     KClusterComponent,
     KClusterDetailsComponent,
+    GaugechartComponent
   ],
   imports: [
     BrowserModule,
